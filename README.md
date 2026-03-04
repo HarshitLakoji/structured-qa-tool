@@ -144,7 +144,7 @@ If given more time, the system could be improved in several ways:
 
 Clone the repository:
 
-git clone https://github.com/your-username/structured-qa-tool.git
+git clone https://github.com/HarshitLakoji/structured-qa-tool.git
 
 Navigate to the project folder:
 
