@@ -1,0 +1,369 @@
+Question: What is a Data Structure? Explain the difference between primitive and non-primitive data structures with examples.
+Answer: A Data Structure is a way of organizing and storing data in a computer program so that it can be accessed and used efficiently. It provides a means of managing large amounts of data, enabling efficient searching, sorting, insertion and deletion of data.
+
+Data structures can be categorized into two types: Primitive data structures and non-primitive data structures.
+
+**Primitive Data Structures:**
+Primitive data structures are the most basic data structures available in a programming language, such as integers, floating-point numbers, characters, and Booleans. These data structures are used to store a single value.
+
+Example:
+```c
+int num = 10;          // Integer
+float pi = 3.14;       // Float
+char letter = 'A';     // Character
+bool isHappy = true;   // Boolean
+```
+**Non-Primitive Data Structures:**
+Non-primitive data structures are more complex and are built using primitive data types. They are further divided into various categories, such as Linear Data Structures (arrays, linked lists, stacks, queues) and Non-Linear Data Structures (trees, graphs, hash tables).
+
+Example:
+```c
+// Array (Linear Data Structure)
+int arr[5] = {1, 2, 3, 4, 5};
+
+// Stack (Linear Data Structure)
+stack<int> s;
+s.push(1);
+s.push(2);
+s.push(3);
+
+// Tree (Non-Linear Data Structure)
+// (Example implementation not provided in the reference)
+```
+In summary, primitive data structures are basic and store a single value, while non-primitive data structures are complex and built using primitive data types to store multiple values.
+Citations:
+Data Structures Full Notes.pdf (chunk 1)
+Data Structures Full Notes.pdf (chunk 0)
+Data Structures Full Notes.pdf (chunk 25)
+Data Structures Full Notes.pdf (chunk 16)
+Data Structures Full Notes.pdf (chunk 3)
+
+--------------------------------------------------
+
+Question: What are the characteristics of a good data structure? Explain correctness, time complexity, and space complexity.
+Answer: Based on the provided context, the characteristics of a good data structure are:
+
+1. **Correctness**: A good data structure should implement its interface correctly. This means that it should support all the operations defined in its interface and perform them correctly.
+
+2. **Time Complexity**: A good data structure should have a running time or execution time of operations as small as possible. This means that it should be able to perform operations efficiently, with minimal delay.
+
+3. **Space Complexity**: A good data structure should have memory usage of a data structure operation as little as possible. This means that it should use minimal memory space to store and process data.
+
+These characteristics are essential for a data structure to be considered good, as they ensure that it can efficiently process large amounts of data and perform various operations effectively.
+Citations:
+Data Structures Full Notes.pdf (chunk 5)
+Data Structures Full Notes.pdf (chunk 0)
+Data Structures Full Notes.pdf (chunk 2)
+Data Structures Full Notes.pdf (chunk 3)
+Data Structures Full Notes.pdf (chunk 25)
+
+--------------------------------------------------
+
+Question: Explain the need for data structures in modern applications. Mention at least four reasons.
+Answer: Based on the provided context, the need for data structures in modern applications can be explained as follows:
+
+There are three common problems that applications face nowadays, and data structures help to address these issues. The reasons for the need of data structures are:
+
+1. Efficient data processing: Data structures provide a way to organize and store data in a way that allows for efficient retrieval, manipulation, and storage of data. This is mentioned in point 1 of the "Need for Data Structure" section.
+
+2. Memory management: Proper use of data structures can help to reduce memory usage and optimize the use of resources. This is mentioned in point 2 of the "Need for Data Structure" section.
+
+3. Code reusability: Although the context does not explicitly mention code reusability, it is implied in the context of data structures providing a systematic way to organize data in order to use it efficiently. This is mentioned in the "Introduction" section.
+
+4. Performance optimization: Data structures can help to reduce the space and time complexities of different tasks, making the program faster and more memory-efficient. This is mentioned in the "Introduction" section.
+
+Additionally, the context mentions that data structures provide a means of managing large amounts of data, enabling efficient searching, sorting, insertion, and deletion of data. This further emphasizes the need for data structures in modern applications.
+Citations:
+Data Structures Full Notes.pdf (chunk 2)
+Data Structures Full Notes.pdf (chunk 6)
+Data Structures Full Notes.pdf (chunk 5)
+Data Structures Full Notes.pdf (chunk 0)
+Data Structures Full Notes.pdf (chunk 3)
+
+--------------------------------------------------
+
+Question: Define the following terms: o Data o Data Item o Record o File o Entity
+Answer: Based on the provided context, here are the definitions for the given terms:
+
+1. **Data**: 
+Data are values or set of values.
+
+2. **Data Item**: 
+Data item refers to single unit of values.
+
+3. **Record**: 
+Record is a collection of field values of a given entity.
+
+4. **File**: 
+File is a collection of records of the entities in a given entity set.
+
+5. **Entity**: 
+An entity is that which contains certain attributes or properties, which may be assigned values.
+Citations:
+Data Structures Full Notes.pdf (chunk 14)
+Data Structures Full Notes.pdf (chunk 13)
+Data Structures Full Notes.pdf (chunk 25)
+Data Structures Full Notes.pdf (chunk 0)
+Data Structures Full Notes.pdf (chunk 30)
+
+--------------------------------------------------
+
+Question: What is the difference between interface and implementation in a data structure?
+Answer: According to the provided context, the difference between interface and implementation in a data structure is as follows:
+
+- Interface: Provides the list of supported operations, type of parameters they can accept, and return type of these operations.
+- Implementation: Provides the internal representation of a data structure and the definition of the algorithms used in the operations of the data structure.
+
+In other words, the interface defines what operations a data structure supports, while the implementation defines how those operations are performed.
+Citations:
+Data Structures Full Notes.pdf (chunk 4)
+Data Structures Full Notes.pdf (chunk 3)
+Data Structures Full Notes.pdf (chunk 5)
+Data Structures Full Notes.pdf (chunk 0)
+Data Structures Full Notes.pdf (chunk 7)
+
+--------------------------------------------------
+
+Question: Classify data structures into linear and non-linear. Explain each with examples.
+Answer: Based on the provided context, data structures can be classified into two categories: Linear and Non-Linear.
+
+**Linear Data Structures:**
+Linear data structures are those in which elements are arranged sequentially. Examples of linear data structures include:
+
+- Arrays
+- Linked Lists
+- Stacks
+- Queues
+
+**Non-Linear Data Structures:**
+Non-linear data structures are those in which elements are not arranged sequentially but follow a hierarchical or interconnected structure. Examples of non-linear data structures include:
+
+- Trees: A hierarchical structure where each node has a parent node and zero or more child nodes.
+- Graphs: A set of nodes (vertices) connected by edges, representing relationships.
+
+Note: The provided context does not explicitly mention primitive and non-primitive data structures as a classification of linear and non-linear data structures.
+Citations:
+Data Structures Full Notes.pdf (chunk 19)
+Data Structures Full Notes.pdf (chunk 0)
+Data Structures Full Notes.pdf (chunk 1)
+Data Structures Full Notes.pdf (chunk 26)
+Data Structures Full Notes.pdf (chunk 7)
+
+--------------------------------------------------
+
+Question: What is an Abstract Data Type (ADT)? Give examples.
+Answer: Abstract Data Type (ADT) is a data type, where only behaviour is defined but not implementation. 
+
+Examples: Array, List, Queue, Stack, Tree.
+Citations:
+Data Structures Full Notes.pdf (chunk 64)
+Data Structures Full Notes.pdf (chunk 135)
+Data Structures Full Notes.pdf (chunk 168)
+Data Structures Full Notes.pdf (chunk 1)
+Data Structures Full Notes.pdf (chunk 65)
+
+--------------------------------------------------
+
+Question: What are the common operations performed on data structures? Explain any five.
+Answer: Based on the provided context, the common operations performed on data structures are:
+
+1. Traversing: Traversing a Data Structure means to visit the element stored in it. It visits data in a systematic manner. This can be done with any type of DS.
+
+2. Searching: Searching means to find a particular element and its job is to locate the element in the data structure.
+
+3. Insertion: Although not explicitly mentioned, insertion is a common operation that involves adding a new element to the data structure.
+
+4. Deletion: Similar to insertion, deletion is also a common operation that involves removing an existing element from the data structure.
+
+5. Sorting: Sorting is not explicitly mentioned, but it is a common operation that involves arranging the elements of the data structure in a specific order.
+
+Note: The context does not explicitly mention these operations, but they are common operations performed on data structures in general.
+Citations:
+Data Structures Full Notes.pdf (chunk 26)
+Data Structures Full Notes.pdf (chunk 25)
+Data Structures Full Notes.pdf (chunk 0)
+Data Structures Full Notes.pdf (chunk 4)
+Data Structures Full Notes.pdf (chunk 6)
+
+--------------------------------------------------
+
+Question: What is an algorithm? List and explain the characteristics of a good algorithm.
+Answer: Not found in references.
+
+--------------------------------------------------
+
+Question: What are the advantages and disadvantages of algorithms?
+Answer: Not found in references.
+
+--------------------------------------------------
+
+Question: Explain different ways of expressing an algorithm.
+Answer: According to the provided context, there are three ways of expressing an algorithm:
+
+1. Flow Chart: A graphical/pictorial representation of the algorithm, making it easier to understand than natural language.
+2. Pseudo Code: Expressing the algorithm in the form of annotations and informative text written in plain English, similar to real code but without syntax, making it compilable or interpretable by a computer.
+3. Recursion: Although not a direct method of expressing an algorithm, recursion is a process where a function calls itself directly or indirectly, and can be used to solve certain problems easily, such as the Towers of Hanoi (TOH) problem.
+Citations:
+Data Structures Full Notes.pdf (chunk 47)
+Data Structures Full Notes.pdf (chunk 48)
+Data Structures Full Notes.pdf (chunk 32)
+Data Structures Full Notes.pdf (chunk 39)
+Data Structures Full Notes.pdf (chunk 45)
+
+--------------------------------------------------
+
+Question: Compare recursion and iteration based on: • Memory usage • Performance • Termination condition • Overhead
+Answer: Not found in references.
+
+--------------------------------------------------
+
+Question: What is recursion? Explain its properties and the importance of base condition.
+Answer: Recursion is the process in which a function calls itself directly or indirectly. 
+
+Properties of Recursion:
+- Performing the same operations multiple times with different inputs.
+- In every step, we try smaller inputs to make the problem smaller.
+
+Importance of Base Condition:
+- A base condition is needed to stop the recursion otherwise infinite loop will occur.
+- The base case is the simplest case for which the solution is known or trivial.
+- It is essential to provide a certain case in order to terminate this recursion process.
+Citations:
+Data Structures Full Notes.pdf (chunk 51)
+Data Structures Full Notes.pdf (chunk 49)
+Data Structures Full Notes.pdf (chunk 58)
+Data Structures Full Notes.pdf (chunk 57)
+Data Structures Full Notes.pdf (chunk 48)
+
+--------------------------------------------------
+
+Question: Explain the Tower of Hanoi problem and list its rules.
+Answer: The Tower of Hanoi problem is a mathematical puzzle where we have three rods (A, B, and C) and N disks. Initially, all the disks are stacked in decreasing value of diameter, i.e., the smallest disk is placed on the top and they are on rod A. The objective of the puzzle is to move the entire stack to another rod (here considered C), obeying the following simple rules:
+
+1. Only one disk can be moved among the towers at any given time.
+2. Only the "top" disk can be removed.
+3. No large disk can sit over a small disk.
+Citations:
+Data Structures Full Notes.pdf (chunk 55)
+Data Structures Full Notes.pdf (chunk 54)
+Data Structures Full Notes.pdf (chunk 56)
+Data Structures Full Notes.pdf (chunk 196)
+Data Structures Full Notes.pdf (chunk 57)
+
+--------------------------------------------------
+
+Question: How are recursive functions stored in memory?
+Answer: Recursion uses more memory, because the recursive function adds to the stack with each recursive call, and keeps the values there until the call is finished. The recursive function uses LIFO (LAST IN FIRST OUT) Structure just like the stack data structure.
+Citations:
+Data Structures Full Notes.pdf (chunk 53)
+Data Structures Full Notes.pdf (chunk 49)
+Data Structures Full Notes.pdf (chunk 60)
+Data Structures Full Notes.pdf (chunk 51)
+Data Structures Full Notes.pdf (chunk 54)
+
+--------------------------------------------------
+
+Question: Define an array. What are the types of arrays?
+Answer: An array is defined as a linear data structure that collects elements of the same data type and stores them in contiguous and adjacent memory locations.
+
+The types of arrays are:
+
+1. Single Dimensional Arrays: This type of array consists of elements of similar types and these elements can be accessed through their indices.
+2. Multidimensional Arrays: The most common type of multi-dimensional array that is used in the C language is a 2-D array. However, the number of dimensions can be more than 2 depending upon the compiler of the user's system.
+Citations:
+Data Structures Full Notes.pdf (chunk 61)
+Data Structures Full Notes.pdf (chunk 62)
+Data Structures Full Notes.pdf (chunk 65)
+Data Structures Full Notes.pdf (chunk 17)
+Data Structures Full Notes.pdf (chunk 63)
+
+--------------------------------------------------
+
+Question: Explain memory representation of a one-dimensional array.
+Answer: Based on the provided context, the memory representation of a one-dimensional array is as follows:
+
+An array requires memory blocks to store its elements. Since the array is one-dimensional, its elements are stored in contiguous memory blocks. 
+
+For example, consider a one-dimensional array 'num' with 10 elements of type 'int'. Each element takes 2 bytes of memory. If the starting address of the first memory block is 2000, then the next elements will get the next contiguous 4 bytes memory block (2 bytes per element). 
+
+The memory address of each element will be the starting address of the first memory block plus the number of bytes occupied by the previous elements. In this case, the memory addresses of the elements will be:
+
+- First element: 2000
+- Second element: 2002
+- Third element: 2004
+- ...
+- Tenth element: 2018
+
+This is the memory representation of a one-dimensional array.
+Citations:
+Data Structures Full Notes.pdf (chunk 66)
+Data Structures Full Notes.pdf (chunk 65)
+Data Structures Full Notes.pdf (chunk 62)
+Data Structures Full Notes.pdf (chunk 170)
+Data Structures Full Notes.pdf (chunk 67)
+
+--------------------------------------------------
+
+Question: Derive and explain the formula to calculate the address of A[i] in a 1D array.
+Answer: The formula to calculate the address of A[i] in a 1D array is:
+
+Address of A[i] = Base_Address + W(i - Lower_Bound)
+
+Where:
+- Base_Address is the address of the first element in the array.
+- W is the weight (size) of a data type.
+- i is the index of the array element to be calculated.
+- Lower_Bound is the index of the first element.
+
+This formula is derived from the fact that each element in the array occupies a contiguous memory block, and the address of each element is the base address plus the size of the data type multiplied by the difference between the index and the lower bound.
+Citations:
+Data Structures Full Notes.pdf (chunk 69)
+Data Structures Full Notes.pdf (chunk 67)
+Data Structures Full Notes.pdf (chunk 68)
+Data Structures Full Notes.pdf (chunk 66)
+Data Structures Full Notes.pdf (chunk 70)
+
+--------------------------------------------------
+
+Question: Explain the Bubble Sort algorithm with its time complexity. Why is it not suitable for large datasets?
+Answer: The Bubble Sort algorithm is a simple sorting algorithm that works by repeatedly iterating through a list of elements, comparing each pair of adjacent elements and swapping them if they are in the wrong order. This process continues until no more swaps are needed, indicating that the list is sorted.
+
+The time complexity of the Bubble Sort algorithm is O(n^2), where n is the number of elements in the list. This is because in the worst-case scenario, the algorithm has to compare each pair of elements, resulting in n*(n-1)/2 comparisons.
+
+Bubble Sort is not suitable for large datasets because its average and worst-case complexity are O(n^2), which can be very slow for large lists. This is because the algorithm has to compare each pair of elements, resulting in a quadratic number of comparisons. As a result, the algorithm's performance degrades rapidly as the size of the input list increases.
+Citations:
+Data Structures Full Notes.pdf (chunk 74)
+Data Structures Full Notes.pdf (chunk 82)
+Data Structures Full Notes.pdf (chunk 79)
+Data Structures Full Notes.pdf (chunk 91)
+Data Structures Full Notes.pdf (chunk 78)
+
+--------------------------------------------------
+
+Question: Compare Bubble Sort and Selection Sort based on: o Time complexity o Space complexity o Stability o Use cases
+Answer: Based on the provided context, here are the comparisons between Bubble Sort and Selection Sort:
+
+**o Time complexity**
+- Bubble Sort: O(n^2) (average)
+- Selection Sort: O(n^2) (average)
+
+**o Space complexity**
+- Bubble Sort: O(1)
+- Selection Sort: O(1)
+
+**o Stability**
+- Bubble Sort: Stable
+- Selection Sort: Not Stable
+
+**o Use cases**
+- Bubble Sort is not suitable for large data sets due to its average and worst-case complexity of O(n^2). It is simple and easy to implement, but not efficient.
+- Selection Sort is also not efficient for large data sets, but it is simple and easy to implement. It is suitable for small data sets or when memory is limited.
+Citations:
+Data Structures Full Notes.pdf (chunk 97)
+Data Structures Full Notes.pdf (chunk 74)
+Data Structures Full Notes.pdf (chunk 79)
+Data Structures Full Notes.pdf (chunk 91)
+Data Structures Full Notes.pdf (chunk 75)
+
+--------------------------------------------------
+

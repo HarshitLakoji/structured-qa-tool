@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Questionnaire Results</title>
+
+<style>
+
+body{
+font-family: Arial;
+max-width:900px;
+margin:auto;
+padding:40px;
+}
+
+h1{
+text-align:center;
+}
+
+.result{
+border:1px solid #ddd;
+padding:20px;
+margin-bottom:20px;
+border-radius:8px;
+background:#fafafa;
+}
+
+textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+margin-top:10px;
+padding:8px 14px;
+cursor:pointer;
+border:none;
+border-radius:6px;
+background:#4CAF50;
+color:white;
+}
+
+button:hover{
+background:#3f9143;
+}
+
+.confidence{
+font-weight:bold;
+color:#2c7;
+}
+
+.actions{
+margin-bottom:25px;
+text-align:center;
+}
+
+.download{
+background:#007BFF;
+}
+
+.download:hover{
+background:#0066d1;
+}
+
+.back{
+background:#555;
+}
+
+.back:hover{
+background:#333;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Questionnaire Results</h1>
+
+<div class="actions">
+
+<button class="back" onclick="goDashboard()">Back to Dashboard</button>
+
+<button class="download" onclick="downloadFile()">Download Export</button>
+
+</div>
+
+{% for item in results %}
+
+<div class="result">
+
+<h3>{{item.question}}</h3>
+
+<p class="confidence"><b>Confidence:</b> {{item.confidence}}</p>
+
+<label><b>Answer:</b></label>
+
+<textarea id="answer_{{item.answer_id}}" rows="4">
+{{item.answer}}
+</textarea>
+
+<br>
+
+<button onclick="saveAnswer({{item.answer_id}})">Save Edit</button>
+
+<p><b>Citations:</b></p>
+
+<ul>
+{% for c in item.citations %}
+<li>{{c}}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+{% endfor %}
+
+<script>
+
+function getToken(){
+return localStorage.getItem("token")
+}
+
+async function saveAnswer(answer_id){
+
+const text=document.getElementById("answer_"+answer_id).value
+
+const res=await fetch("/update-answer/"+answer_id,{
+method:"PUT",
+headers:{
+"Content-Type":"application/json",
+Authorization:"Bearer "+getToken()
+},
+body:JSON.stringify({
+answer_text:text
+})
+})
+
+const data=await res.json()
+
+alert(data.message)
+
+}
+
+async function downloadFile(){
+
+    const token = localStorage.getItem("token")
+
+    const urlParts = window.location.pathname.split("/")
+    const questionnaire_id = urlParts[urlParts.length-1]
+
+    const res = await fetch("/export/"+questionnaire_id,{
+    headers:{
+    Authorization:"Bearer "+token
+    }
+    })
+
+    const blob = await res.blob()
+
+    const url = window.URL.createObjectURL(blob)
+
+    const a = document.createElement("a")
+    a.href = url
+    a.download = "questionnaire_"+questionnaire_id+"_export.txt"
+
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+
+    }
+    function goDashboard(){
+        window.location="/dashboard"
+    }
+
+</script>
+
+</body>
+</html>

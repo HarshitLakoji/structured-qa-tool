@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Structured QA Tool</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background:#f5f7fb;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+width:320px;
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:8px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#4CAF50;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#45a049;
+}
+
+.switch{
+text-align:center;
+margin-top:15px;
+cursor:pointer;
+color:#007BFF;
+}
+
+#msg{
+text-align:center;
+margin-top:10px;
+color:red;
+}
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+    <h2 id="title">Login</h2>
+
+    <input type="email" id="email" placeholder="Email">
+
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="submitForm()">Submit</button>
+
+    <p id="msg"></p>
+
+    <p class="switch" onclick="toggleForm()">
+    Don't have an account? Sign up
+    </p>
+
+    </div>
+
+
+<script>
+
+    let mode="login"
+
+    function toggleForm(){
+
+    if(mode==="login"){
+    mode="signup"
+    document.getElementById("title").innerText="Signup"
+    document.querySelector(".switch").innerText="Already have an account? Login"
+    }
+    else{
+    mode="login"
+    document.getElementById("title").innerText="Login"
+    document.querySelector(".switch").innerText="Don't have an account? Sign up"
+    }
+
+    }
+
+
+    async function submitForm(){
+
+    const email=document.getElementById("email").value
+    const password=document.getElementById("password").value
+
+    const endpoint = mode==="login" ? "/login" : "/signup"
+
+    const res = await fetch(endpoint,{
+    method:"POST",
+    headers:{
+    "Content-Type":"application/json"
+    },
+    body:JSON.stringify({
+    email:email,
+    password:password
+    })
+    })
+
+    const data = await res.json()
+
+    if(mode==="login"){
+
+    if(data.access_token){
+    localStorage.setItem("token",data.access_token)
+    window.location="/dashboard"
+    }
+    else{
+    document.getElementById("msg").innerText="Login failed"
+    }
+
+    }
+    else{
+
+    document.getElementById("msg").innerText="Signup successful. You can login now."
+
+    }
+
+    }
+
+</script>
+
+</body>
+</html>

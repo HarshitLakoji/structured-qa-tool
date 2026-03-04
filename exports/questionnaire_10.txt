@@ -1,0 +1,144 @@
+Question: What is a Data Structure? Explain the difference between primitive and non-primitive data structures with examples.
+Answer: A Data Structure is a method to organize and store data in a computer program to allow efficient access and use. Primitive data structures, like integers, floats, characters, and Booleans, are the most basic structures available in a programming language. They are simple and are not built on other data types. For example, an integer represents whole numbers, a float represents numbers with decimals, a character represents letters or symbols, and a Boolean represents true/false values.
+
+
+Non-primitive data structures are more complex and are built using primitive data types. They include arrays, linked lists, stacks, queues, trees, graphs, and hash tables. For example, an array can store a collection of primitive data types, while a tree can store data in a hierarchical structure, like a family tree.
+
+
+In essence, the key difference is that primitive data structures are the simplest and are not composed of other data structures, whereas non-primitive data structures are built from primitive types and can represent more complex relationships.
+Citations:
+-
+primitive data structures.  
+Primitive data structures  are the most basic data structures available in a programming 
+language, such as integers, floating-point numbers, characters and Booleans.  
+Non-primitive data structures are complex data structures that are built using primitive data 
+types, such as arrays, linked lists, stacks, queues, trees, graphs and hash tables. 
+The choice of data structure for a particular task depends on the type and amount of data to 
+be 
+processed, the operati
+ = 10;          // Integer 
+    float pi = 3.14;       // Float 
+    char letter = 'A';     // Character 
+    bool isHappy = true;   // Boolean 
+    cout << "Integer: " << num << endl; 
+    cout << "Float: " << pi << endl; 
+    cout << "Character: " << letter << endl; 
+    cout << "Boolean: " << isHappy << endl; 
+    return 0; 
+} 
+2. Non-Primitive Data Structures 
+Non-primitive data structures are more complex and are built using primitive data types. They 
+are further divided into: 
+a. Linear D
+ 
+ 
+ 
+1 Data Structures 
+Unit-1 
+Introduction:  
+WHAT IS DATA STRUCTURE? 
+In computer science, a data structure is a way of organizing and storing data in a computer 
+program so that it can be accessed and used efficiently. Data structures provide a means of 
+managing large amounts of data, enabling efficient searching, sorting, insertion and deletion 
+of data. 
+Data structures can be categorized into two types: Primitive data structures  and non-
+primitive data structures.  
+Primitive data stru
+
+--------------------------------------------------
+
+Question: What are the characteristics of a good data structure? Explain correctness, time complexity, and space complexity.
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: Explain the need for data structures in modern applications. Mention at least four reasons.
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: Define the following terms: o Data o Data Item o Record o File o Entity
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: What is the difference between interface and implementation in a data structure?
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: Classify data structures into linear and non-linear. Explain each with examples.
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: What is an Abstract Data Type (ADT)? Give examples.
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: What are the common operations performed on data structures? Explain any five.
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: What is an algorithm? List and explain the characteristics of a good algorithm.
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: What are the advantages and disadvantages of algorithms?
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: Explain different ways of expressing an algorithm.
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: Compare recursion and iteration based on: • Memory usage • Performance • Termination condition • Overhead
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: What is recursion? Explain its properties and the importance of base condition.
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: Explain the Tower of Hanoi problem and list its rules.
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: How are recursive functions stored in memory?
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: Define an array. What are the types of arrays?
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: Explain memory representation of a one-dimensional array.
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: Derive and explain the formula to calculate the address of A[i] in a 1D array.
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: Explain the Bubble Sort algorithm with its time complexity. Why is it not suitable for large datasets?
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: Compare Bubble Sort and Selection Sort based on: o Time complexity o Space complexity o Stability o Use cases
+Answer: Not generated.
+
+--------------------------------------------------
+

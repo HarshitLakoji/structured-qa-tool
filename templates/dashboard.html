@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Structured QA Tool Dashboard</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin:auto;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+}
+
+.section{
+    border:1px solid #ddd;
+    padding:20px;
+    margin-top:20px;
+    border-radius:8px;
+}
+
+button{
+    padding:8px 15px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+input{
+    padding:6px;
+    width:100%;
+    margin-top:6px;
+}
+
+pre{
+    background:#f4f4f4;
+    padding:15px;
+    border-radius:6px;
+    overflow:auto;
+}
+
+.logout{
+    float:right;
+}
+
+</style>
+
+</head>
+
+<body>
+
+    <h1>Structured QA Tool</h1>
+
+    <button class="logout" onclick="logout()">Logout</button>
+
+    <div class="section">
+
+        <h3>Upload Reference Document</h3>
+
+        <label for="ref">Select Reference File</label>
+        <input type="file" id="ref">
+
+        <button onclick="uploadRef()">Upload Reference</button>
+
+    </div>
+
+
+    <div class="section">
+
+            <h3>Upload Questionnaire</h3>
+
+            <label for="questionnaire">Select Questionnaire File</label>
+            <input type="file" id="questionnaire">
+
+            <button onclick="uploadQuestionnaire()">Upload Questionnaire</button>
+
+            <p id="questionnaireResult"></p>
+
+    </div>
+
+
+    <div class="section">
+
+        <h3>Generate Answers</h3>
+
+        <label for="qid">Questionnaire ID</label>
+        <input type="number" id="qid" placeholder="Enter Questionnaire ID">
+
+        <button onclick="generateAnswers()">Generate Answers</button>
+
+    </div>
+    <div class="section">
+
+    <h3>View Results</h3>
+
+    <label for="view_qid">Questionnaire ID</label>
+    <input type="number" id="view_qid" placeholder="Enter Questionnaire ID">
+
+    <button onclick="viewResults()">View Results</button>
+
+    </div>
+
+
+    <!-- <div class="section">
+
+        <h3>Ask Question</h3>
+
+        <label for="question">Enter Question</label>
+        <input id="question" placeholder="Ask something from reference documents">
+
+        <button onclick="ask()">Ask</button>
+
+        <pre id="answer"></pre>
+
+    </div> -->
+
+
+<script>
+
+function getToken(){
+    return localStorage.getItem("token")
+}
+
+async function uploadRef(){
+
+    const file=document.getElementById("ref").files[0]
+
+    if(!file){
+    alert("Select a file")
+    return
+    }
+
+    const form=new FormData()
+    form.append("file",file)
+
+    const res=await fetch("/upload-reference",{
+    method:"POST",
+    headers:{
+    Authorization:"Bearer "+getToken()
+    },
+    body:form
+    })
+
+    const data=await res.json()
+
+    alert(data.message)
+
+}
+
+async function generateAnswers(){
+
+const qid=document.getElementById("qid").value
+
+if(!qid){
+alert("Enter questionnaire ID")
+return
+}
+
+const token=getToken()
+
+const res=await fetch("/generate-answers/"+qid,{
+method:"POST",
+headers:{
+Authorization:"Bearer "+token
+}
+})
+
+const data=await res.json()
+
+alert("Answers generated for "+data.total_questions+" questions")
+
+window.location="/results/"+qid
+
+}
+
+async function uploadQuestionnaire(){
+
+    const file = document.getElementById("questionnaire").files[0]
+
+    if(!file){
+    alert("Please select a questionnaire file")
+    return
+    }
+
+    const form = new FormData()
+    form.append("file", file)
+
+    const token = getToken()
+
+    const res = await fetch("/upload-questionnaire",{
+    method:"POST",
+    headers:{
+    Authorization:"Bearer "+token
+    },
+    body:form
+    })
+
+    const data = await res.json()
+
+    alert("Uploaded successfully\nQuestionnaire ID: "+data.questionnaire_id)
+
+    }
+
+    function logout(){
+
+        localStorage.removeItem("token")
+        window.location="/"
+        
+    }
+
+    function viewResults(){
+
+        const qid=document.getElementById("view_qid").value
+
+        if(!qid){
+        alert("Enter questionnaire ID")
+        return
+        }
+
+        window.location="/results/"+qid
+
+     }
+</script>
+
+</body>
+</html>

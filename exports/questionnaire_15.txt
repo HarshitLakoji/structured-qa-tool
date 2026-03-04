@@ -1,0 +1,154 @@
+Question: What is a Data Structure? Explain the difference between primitive and non-primitive data structures with examples.
+Answer: A data structure is a way of organizing and storing data in a computer program so that it can be accessed and used efficiently. Primitive data structures are the most basic data structures available in a programming language, such as integers, floating-point numbers, characters, and Booleans. Non-primitive data structures are complex data structures that are built using primitive data types, such as arrays, linked lists, stacks, queues, trees, graphs, and hash tables.
+Citations:
+Data Structures Full Notes.pdf (chunk 1)
+Data Structures Full Notes.pdf (chunk 0)
+
+--------------------------------------------------
+
+Question: What are the characteristics of a good data structure? Explain correctness, time complexity, and space complexity.
+Answer: Correctness: Data structure implementation should implement its interface correctly. Time Complexity: Running time or the execution time of operations of data structure must be as small as possible. Space Complexity: Memory usage of a data structure operation should be as little as possible.
+Citations:
+Data Structures Full Notes.pdf (chunk 5)
+Data Structures Full Notes.pdf (chunk 0)
+
+--------------------------------------------------
+
+Question: Explain the need for data structures in modern applications. Mention at least four reasons.
+Answer: The need for data structures in modern applications is due to efficient data processing, memory management, code reuse, and scalability. Data structures provide a way to organize and store data in a way that allows for efficient retrieval, manipulation, and storage of data.
+Citations:
+Data Structures Full Notes.pdf (chunk 2)
+Data Structures Full Notes.pdf (chunk 6)
+
+--------------------------------------------------
+
+Question: Define the following terms: o Data o Data Item o Record o File o Entity
+Answer: Data: Data are values or set of values. Data Item: Data item refers to single unit of values. Record: Record is a collection of field values of a given entity. File: File is a collection of records of the entities in a given entity set. Entity: An entity is that which contains certain attributes or properties, which may be assigned values.
+Citations:
+Data Structures Full Notes.pdf (chunk 14)
+Data Structures Full Notes.pdf (chunk 13)
+
+--------------------------------------------------
+
+Question: What is the difference between interface and implementation in a data structure?
+Answer: Interface: Each data structure has an interface. Interface represents the set of operations that a data structure supports. Implementation: Implementation provides the internal representation of a data structure. Implementation also provides the definition of the algorithms used in the operations of the data structure.
+Citations:
+Data Structures Full Notes.pdf (chunk 4)
+Data Structures Full Notes.pdf (chunk 3)
+
+--------------------------------------------------
+
+Question: Classify data structures into linear and non-linear. Explain each with examples.
+Answer: Linear Data Structures: Linear data structures are those in which elements are arranged in a sequence. Examples: Array, Stack, Queue. Non-Linear Data Structures: Non-linear data structures are those in which elements are not arranged sequentially but follow a hierarchical or interconnected structure. Examples: Tree, Graph.
+Citations:
+Data Structures Full Notes.pdf (chunk 19)
+Data Structures Full Notes.pdf (chunk 0)
+
+--------------------------------------------------
+
+Question: What is an Abstract Data Type (ADT)? Give examples.
+Answer: Abstract Data Type (ADT) is a data type, where only behaviour is defined but not implementation. Examples: Array, List, Queue, Stack, Tree.
+Citations:
+Data Structures Full Notes.pdf (chunk 64)
+Data Structures Full Notes.pdf (chunk 135)
+
+--------------------------------------------------
+
+Question: What are the common operations performed on data structures? Explain any five.
+Answer: Traversing: Traversing a Data Structure means to visit the element stored in it. Searching: Searching means to find a particular element in the data structure. Insertion: Insertion means to add a new element to the data structure. Deletion: Deletion means to remove an element from the data structure. Merging: Merging means to combine the elements of two data structures.
+Citations:
+Data Structures Full Notes.pdf (chunk 26)
+Data Structures Full Notes.pdf (chunk 25)
+
+--------------------------------------------------
+
+Question: What is an algorithm? List and explain the characteristics of a good algorithm.
+Answer: An algorithm is a set of finite rules or instructions to be followed in calculations or other problem-solving operations. Characteristics of a good algorithm: Correctness, Efficiency, Scalability, Readability, and Maintainability.
+Citations:
+Data Structures Full Notes.pdf (chunk 32)
+Data Structures Full Notes.pdf (chunk 38)
+
+--------------------------------------------------
+
+Question: What are the advantages and disadvantages of algorithms?
+Answer: Advantages: Algorithms help to automate processes and make them more reliable, faster, and easier to perform. Disadvantages: Algorithms can be complex and difficult to understand, and they may not always produce the desired output.
+Citations:
+Data Structures Full Notes.pdf (chunk 38)
+Data Structures Full Notes.pdf (chunk 37)
+
+--------------------------------------------------
+
+Question: Explain different ways of expressing an algorithm.
+Answer: Natural Language: Expressing an algorithm in natural language is a simple way to describe it. Flow Chart: Expressing an algorithm in a flow chart is a graphical way to represent it. Pseudo Code: Expressing an algorithm in pseudo code is a way to describe it in a programming language-like syntax.
+Citations:
+Data Structures Full Notes.pdf (chunk 47)
+Data Structures Full Notes.pdf (chunk 48)
+
+--------------------------------------------------
+
+Question: Compare recursion and iteration based on: • Memory usage • Performance • Termination condition • Overhead
+Answer: Recursion: Recursion uses more memory because the recursive function adds to the stack with each recursive call. Iteration: Iteration uses less memory because it uses a loop to repeat the process. Performance: Recursion can be slower than iteration because it involves function calls and returns. Termination condition: Recursion requires a termination condition to stop the recursion. Overhead: Recursion has a higher overhead than iteration because it involves function calls and returns.
+Citations:
+Data Structures Full Notes.pdf (chunk 57)
+Data Structures Full Notes.pdf (chunk 58)
+
+--------------------------------------------------
+
+Question: What is recursion? Explain its properties and the importance of base condition.
+Answer: Recursion is a process in which a function calls itself directly or indirectly. Properties of recursion: Performing the same operations multiple times with different inputs. Base condition is needed to stop the recursion otherwise infinite loop will occur.
+Citations:
+Data Structures Full Notes.pdf (chunk 51)
+Data Structures Full Notes.pdf (chunk 49)
+
+--------------------------------------------------
+
+Question: Explain the Tower of Hanoi problem and list its rules.
+Answer: The Tower of Hanoi problem is a mathematical puzzle where we have three rods (A, B, and C) and N disks. Initially, all the disks are stacked in decreasing value of diameter on rod A. The objective of the puzzle is to move the entire stack to another rod (here considered C), obeying the following simple rules: Only one disk can be moved among the three rods at a time. Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty rod. No disk may be placed on top of a smaller disk.
+Citations:
+Data Structures Full Notes.pdf (chunk 55)
+Data Structures Full Notes.pdf (chunk 54)
+
+--------------------------------------------------
+
+Question: How are recursive functions stored in memory?
+Answer: Recursion uses more memory because the recursive function adds to the stack with each recursive call. The recursive function uses LIFO (LAST IN FIRST OUT) Structure just like the stack data structure.
+Citations:
+Data Structures Full Notes.pdf (chunk 53)
+Data Structures Full Notes.pdf (chunk 49)
+
+--------------------------------------------------
+
+Question: Define an array. What are the types of arrays?
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: Explain memory representation of a one-dimensional array.
+Answer: Not generated.
+
+--------------------------------------------------
+
+Question: Derive and explain the formula to calculate the address of A[i] in a 1D array.
+Answer: Address of A[i] = Base_Address + W(i – Lower_Bound) Where Base Address is the address of the first element in an array. W= is the weight (size) of a data type. i = is the index of array element to be calculated. Lower-bound= is the index of the first element.
+Citations:
+Data Structures Full Notes.pdf (chunk 69)
+Data Structures Full Notes.pdf (chunk 67)
+
+--------------------------------------------------
+
+Question: Explain the Bubble Sort algorithm with its time complexity. Why is it not suitable for large datasets?
+Answer: Bubble Sort is a simple sorting algorithm. This sorting algorithm is comparison-based algorithm in which each pair of adjacent elements is compared and the elements are swapped if they are not in order. The time complexity of Bubble Sort is O(n^2) where n is the number of items. It is not suitable for large datasets because its average and worst-case complexity are of O(n^2).
+Citations:
+Data Structures Full Notes.pdf (chunk 74)
+Data Structures Full Notes.pdf (chunk 82)
+
+--------------------------------------------------
+
+Question: Compare Bubble Sort and Selection Sort based on: o Time complexity o Space complexity o Stability o Use cases
+Answer: Bubble Sort: Time Complexity: O(n^2) Space Complexity: O(1) Stability: Stable Use cases: Small datasets. Selection Sort: Time Complexity: O(n^2) Space Complexity: O(1) Stability: Not Stable Use cases: Small datasets.
+Citations:
+Data Structures Full Notes.pdf (chunk 97)
+Data Structures Full Notes.pdf (chunk 74)
+
+--------------------------------------------------
+
