@@ -1,15 +1,18 @@
 import chromadb
 from chromadb.config import Settings
-from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
 import os
 from groq import Groq
 import json
-
+from huggingface_hub import InferenceClient
 
 load_dotenv()
+
+hf_client = InferenceClient(
+    token=os.getenv("HF_TOKEN")
+)
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+#embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 chroma_client = chromadb.Client(
     Settings(
@@ -36,6 +39,13 @@ def chunk_text(text, chunk_size=500, overlap=50):
 
     return chunks
 
+def get_embedding(text: str):
+    embedding = hf_client.feature_extraction(
+        text,
+        model="sentence-transformers/all-MiniLM-L6-v2"
+    )
+    return embedding
+
 
 def add_document_to_vectorstore(doc_id: int, text: str, user_id: int, filename: str):
 
@@ -43,7 +53,7 @@ def add_document_to_vectorstore(doc_id: int, text: str, user_id: int, filename: 
 
     for i, chunk in enumerate(chunks):
 
-        embedding = embedding_model.encode(chunk).tolist()
+        embedding = get_embedding(chunk)
 
         collection.add(
             documents=[chunk],
@@ -56,10 +66,9 @@ def add_document_to_vectorstore(doc_id: int, text: str, user_id: int, filename: 
             }]
         )
 
-
 def retrieve_relevant_chunks(query: str, user_id: int, top_k: int = 2):
 
-    query_embedding = embedding_model.encode(query).tolist()
+    query_embedding = get_embedding(query)
 
     results = collection.query(
         query_embeddings=[query_embedding],
