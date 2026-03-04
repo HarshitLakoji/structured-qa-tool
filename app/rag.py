@@ -44,7 +44,7 @@ def get_embedding(text: str):
         text,
         model="sentence-transformers/all-MiniLM-L6-v2"
     )
-    return embedding
+    return embedding.tolist()
 
 
 def add_document_to_vectorstore(doc_id: int, text: str, user_id: int, filename: str):
