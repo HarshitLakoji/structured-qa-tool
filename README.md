@@ -172,11 +172,11 @@ http://localhost:8000/docs
 
 Live Application URL:
 
-https://your-render-app.onrender.com
+https://structured-qa-tool.onrender.com
 
 API Documentation:
 
-https://your-render-app.onrender.com/docs
+https://structured-qa-tool.onrender.com/docs
 
 ---
 
